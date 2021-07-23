@@ -80,8 +80,9 @@ h1, h2, h3, h4, h5, h6 {
   width: 150px;
   height: 40px;
   background-color: #000;
+  font-size: 18px;
   color: #fff;
-  border-radius: 20px;
+  border-radius: 10px;
   transition: 0.5s;
 }
 
@@ -89,6 +90,10 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f3f3f3;
   color: #000;
   border: 2px solid silver;
+}
+
+.btn:active {
+  transform: scale(0.8);
 }
 
 /* Main */
@@ -167,6 +172,11 @@ h1, h2, h3, h4, h5, h6 {
 .product__weight {}
 
 .product__prise {}
+
+.btn-cart {
+  display: block;
+  margin: 15px auto 0 auto;
+}
 
 .cart {}
 

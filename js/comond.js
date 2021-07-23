@@ -1,11 +1,17 @@
-const productMinus = document.querySelector('.product-minus-js');
-const productAmount = document.querySelector('.product-amount-js');
-const productPlus = document.querySelector('.product-plus-js');
+const productMinus = document.querySelectorAll('.product-minus-js');
+const productAmount = document.querySelectorAll('.product-amount-js');
+const productPlus = document.querySelectorAll('.product-plus-js');
 
 let productAmountData = 1;
 
+
+
 function clearClass() {
   productAmount.classList.remove('amount-bounce');
+}
+
+function a() {
+
 }
 
 function increaseAmountProduct() {
@@ -22,5 +28,10 @@ function subtractionAmountProduct() {
   }
 }
 
-productMinus.addEventListener('click', subtractionAmountProduct);
-productPlus.addEventListener('click', increaseAmountProduct);
+for (let plus of productPlus) {
+  plus.addEventListener('click', increaseAmountProduct);
+}
+
+for (let minus of productMinus) {
+  minus.addEventListener('click', subtractionAmountProduct);
+}

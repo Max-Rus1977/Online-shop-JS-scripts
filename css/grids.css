@@ -22,10 +22,19 @@
   width: 100%;
 }
 
+section {
+  width: 1200px;
+  margin: 50px auto;
+}
+
 .section-title {
   padding: 80px 0 0 56px;
   font-size: 36px;
   color: #1A1A1A;
+}
+
+.diIlneBlock {
+  display: inline-block;
 }
 
 .row-top-40 {

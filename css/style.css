@@ -91,6 +91,63 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid silver;
 }
 
+/* Main */
+
+.product {}
+
+.wrapper-product {
+  width: 250px;
+  padding: 15px;
+  border: 2px solid #0dccf7;
+  border-radius: 6px;
+}
+
+.product__imge {}
+
+.product__title {
+  margin: 15px 0;
+}
+
+.product__title {
+  margin-bottom: 15px;
+}
+
+.wrapper-product__counter {
+  margin: 15px;
+  text-align: center;
+}
+
+.counter__box {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 5px 0;
+  background-color: #24d8bf;
+  color: #fff;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.product__minus {}
+
+.product__amount {}
+
+.product__plus {}
+
+.wrapper-product__price {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
+
+.product__weight {}
+
+.product__prise {}
+
+.cart {}
+
 /* Modal phon, Modal user, Modal thanks, Modal erorr */
 
 .modal {

@@ -1,0 +1,128 @@
+@media only screen and (max-width : 1250px) {
+
+}
+
+@media only screen and (max-width : 1150px) {
+
+}
+
+@media only screen and (max-width : 1100px) {
+
+
+}
+
+@media only screen and (max-width : 950px) {
+
+
+}
+
+@media only screen and (max-width : 850px) {
+
+
+}
+
+@media only screen and (max-width : 780px) {
+  
+   .burger {
+    width: 50px;
+    height: 26px;
+    margin-left: 50px;
+  }
+
+  .burger-lines {
+    position: relative;
+    width: 50px;
+    height: 3px;
+    background-color: #4754EB;
+    transition: 0.9s;
+  }
+
+  .burger-lines:before,
+  .burger-lines:after {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    background-color: #4754EB;
+  }
+
+  .burger-lines:before {
+    top: 10px;
+    left: 0;
+  }
+
+  .burger-lines:after {
+    top: 20px;
+    left: 0;
+    transform: rotateX(10deg);
+    transition: 0.9s;
+  }
+
+  /* Burger animate */
+  ._burger-animate .burger-lines {
+    width: 40px;
+    top: 3px;
+    transform: rotate(45deg);
+    transition: 0.9s;
+  }
+  ._burger-animate .burger-lines:before {
+    opacity: 0;
+  }
+  ._burger-animate .burger-lines:after {
+    width: 42px;
+    top: 0px;
+    transform: rotate(-90deg);
+    transition: 0.9s;
+  }
+  /* -------------- */
+
+  .header-menu {
+    position: absolute;
+    background-color: #000;
+    max-width: 720px;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    top: 145px;
+    padding: 40px 56px 127px 56px;
+    justify-content: left;
+    font-size: 56px;
+    border-radius: 24px;
+    z-index: -10;
+    opacity: 0;
+    transform: translate(0px, 120%);
+    transition: 0.8s;
+
+  }
+
+  .header-menu li {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .header-menu li a {
+    color: #1A1A1A;
+  }
+
+  ._visibl-mabale-menu {
+    z-index: 10;
+    opacity: 1;
+    transform: translate(0%, 0px);
+    transition: 0.8s;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+
+
+}
+
+@media only screen and (max-width : 500px) {
+
+
+}
+
+@media only screen and (max-width : 450px) {
+
+
+}

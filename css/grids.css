@@ -2,16 +2,16 @@
   color: #1A1A1A;
 }
 
-.blue-color{
- color: #4754EB;
+.blue-color {
+  color: #4754EB;
 }
 
 .white-color {
- color: #fff;
+  color: #fff;
 }
 
 .ff-medium {
- font-weight: 500;
+  font-weight: 500;
 }
 
 .fs-16 {
@@ -19,7 +19,7 @@
 }
 
 .width-100 {
- width: 100%;
+  width: 100%;
 }
 
 .section-title {
@@ -33,11 +33,11 @@
 }
 
 .row {
- display: flex;
- flex-wrap: wrap;
- flex-shrink: 0;
- width: 100%;
- max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 .col {
@@ -49,13 +49,18 @@
   width: auto;
 }
 
+.col-50 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
 .col-logo {
   flex: 0 0 auto;
   width: 17%;
 }
 
 .col-nav {
- flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .col-btn-registr {
@@ -69,9 +74,9 @@
 }
 
 .col-4 {
- flex: 0 0 auto;
- width: 25%;
- padding: 20px 10px 20px 24px;
+  flex: 0 0 auto;
+  width: 25%;
+  padding: 20px 10px 20px 24px;
 }
 
 .text-centr {
@@ -79,19 +84,19 @@
 }
 
 .df-al-centr {
- display: flex;
- align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .df-ju-centr {
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .df-al-ju-centr {
- display: flex;
- align-items: center;
- justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .stretching {
@@ -99,7 +104,7 @@
 }
 
 .bg-section {
- background-repeat:no-repeat;
- background-position: center center;
- background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }

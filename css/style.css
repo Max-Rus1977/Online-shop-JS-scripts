@@ -1,20 +1,30 @@
 /*Обнуление*/
-*{
+
+* {
   padding: 0;
   margin: 0;
   border: 0;
 }
-*,*:before,*:after{
+
+*, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
 
-nav,footer,header,aside{display: block;}
+:focus, :active {
+  outline: none;
+}
 
-html,body{
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
   /*height: 100%;*/
   width: 100%;
   font-size: 100%;
@@ -24,20 +34,49 @@ html,body{
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-input,button,textarea{font-family:inherit;}
 
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
+input, button, textarea {
+  font-family: inherit;
+}
 
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
 /*--------------------*/
 
 .btn {
+  display: none;
   width: 150px;
   height: 40px;
   background-color: #000;
@@ -53,6 +92,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 /* Modal phon, Modal user, Modal thanks, Modal erorr */
+
 .modal {
   position: fixed;
   top: 0;
@@ -65,17 +105,16 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
   transition: 0.9s;
 }
 
-.modal-thanks,
-.modal-erorr {
+.modal-thanks, .modal-erorr {
   background: none;
 }
 
-.modal-collection{
+.modal-collection {
   position: relative;
   display: flex;
   flex-direction: column;
   max-width: 448px;
-  padding-bottom: 20px ;
+  padding-bottom: 20px;
   background-color: rgb(139 112 223 / 34%);
   border-radius: 16px;
   transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
@@ -87,8 +126,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
   height: 195px;
 }
 
-.check-mark,
-.erorr-check-mark {
+.check-mark, .erorr-check-mark {
   position: relative;
   height: 78px;
   top: -3px;
@@ -104,8 +142,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
   color: red;
 }
 
-.check-mark:before,
-.erorr-check-mark:before {
+.check-mark:before, .erorr-check-mark:before {
   position: absolute;
   width: 100%;
   left: 0;
@@ -119,7 +156,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
   top: -35px;
   left: 197px;
   box-shadow: 1px 1px 1px 1px #eee;
-  border-radius: 50%; 
+  border-radius: 50%;
 }
 
 .wrap-closes {
@@ -131,6 +168,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
   cursor: pointer;
   transition: 0.5s;
 }
+
 .closes {
   transition: 0.5s;
 }
@@ -138,6 +176,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .wrap-closes:hover {
   box-shadow: 1px 1px 1px 3px #fff;
 }
+
 .wrap-closes:hover .closes {
   transform: rotate(180deg);
   color: red;
@@ -157,16 +196,15 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
   color: #000;
 }
 
-.modal-thanks-collection,
-.modal-erorr-collection {
+.modal-thanks-collection, .modal-erorr-collection {
   box-shadow: 1px 1px 20px 12px rgb(180 159 220 / 21%);
 }
 
 .modal-form {
   text-align: center;
 }
-.modal-wrap-input input,
-.modal-wrap-input textarea {
+
+.modal-wrap-input input, .modal-wrap-input textarea {
   width: 80%;
   min-height: 56px;
   margin: 16px auto;
@@ -175,12 +213,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
   font-size: 18px;
   border-radius: 16px;
   box-shadow: 1px 1px 1px 1px #757575;
-  font-size: 18px; 
+  font-size: 18px;
 }
+
 .modal-wrap-input textarea {
   padding-top: 15px;
-  min-height: 100px; 
+  min-height: 100px;
 }
+
 .modal-button {
   width: 130px;
   height: 36px;
@@ -189,6 +229,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
   border-radius: 16px;
   transition: 0.5s;
 }
+
 .modal-button:hover {
   background: #fff;
   color: #4754EB;
@@ -207,6 +248,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
   margin-top: 10px;
   font-size: 12px;
 }
+
 .modal-personal-data a {
   display: block;
   margin-top: -9px;
@@ -214,6 +256,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 /* Add visibl class in JS */
+
 .modal-visibl {
   z-index: 10;
   opacity: 1;
@@ -224,28 +267,89 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
   top: 0;
 }
 
-
-input:focus,
-textarea:focus{
+input:focus, textarea:focus {
   box-shadow: 0 0 15px #977fe0;
   transition: 0.8s;
 }
 
 /* Placeholder */
-input::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease;}
-input::-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease;}
-input:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease;}
-input:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease;}
-input:focus::-webkit-input-placeholder {text-indent: 750px; transition: text-indent 0.3s ease;}
-input:focus::-moz-placeholder          {text-indent: 750px; transition: text-indent 0.3s ease;}
-input:focus:-moz-placeholder           {text-indent: 750px; transition: text-indent 0.3s ease;}
-input:focus:-ms-input-placeholder      {text-indent: 750px; transition: text-indent 0.3s ease;}
 
-textarea::-webkit-input-placeholder       {opacity: 1; transition: text-indent 0.3s ease;}
-textarea::-moz-placeholder                {opacity: 1; transition: text-indent 0.3s ease;}
-textarea:-moz-placeholder                 {opacity: 1; transition: text-indent 0.3s ease;}
-textarea:-ms-input-placeholder            {opacity: 1; transition: text-indent 0.3s ease;}
-textarea:focus::-webkit-input-placeholder {opacity: 0; transition: text-indent 0.3s ease;}
-textarea:focus::-moz-placeholder          {opacity: 0; transition: text-indent 0.3s ease;}
-textarea:focus:-moz-placeholder           {opacity: 0; transition: text-indent 0.3s ease;}
-textarea:focus:-ms-input-placeholder      {opacity: 0; transition: text-indent 0.3s ease;}
+input::-webkit-input-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.3s ease;
+}
+
+input::-moz-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.3s ease;
+}
+
+input:-moz-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.3s ease;
+}
+
+input:-ms-input-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.3s ease;
+}
+
+input:focus::-webkit-input-placeholder {
+  text-indent: 750px;
+  transition: text-indent 0.3s ease;
+}
+
+input:focus::-moz-placeholder {
+  text-indent: 750px;
+  transition: text-indent 0.3s ease;
+}
+
+input:focus:-moz-placeholder {
+  text-indent: 750px;
+  transition: text-indent 0.3s ease;
+}
+
+input:focus:-ms-input-placeholder {
+  text-indent: 750px;
+  transition: text-indent 0.3s ease;
+}
+
+textarea::-webkit-input-placeholder {
+  opacity: 1;
+  transition: text-indent 0.3s ease;
+}
+
+textarea::-moz-placeholder {
+  opacity: 1;
+  transition: text-indent 0.3s ease;
+}
+
+textarea:-moz-placeholder {
+  opacity: 1;
+  transition: text-indent 0.3s ease;
+}
+
+textarea:-ms-input-placeholder {
+  opacity: 1;
+  transition: text-indent 0.3s ease;
+}
+
+textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: text-indent 0.3s ease;
+}
+
+textarea:focus::-moz-placeholder {
+  opacity: 0;
+  transition: text-indent 0.3s ease;
+}
+
+textarea:focus:-moz-placeholder {
+  opacity: 0;
+  transition: text-indent 0.3s ease;
+}
+
+textarea:focus:-ms-input-placeholder {
+  opacity: 0;
+  transition: text-indent 0.3s ease;
+}

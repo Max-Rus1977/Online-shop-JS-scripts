@@ -23,11 +23,21 @@ function increaseAmountProduct() {
 }
 
 function subtractionAmountProduct() {
+  const thisProductCounter = this.closest('.wrapper-product__counter');
+  const productAmount = thisProductCounter.querySelector('.product-amount-js');
+
+  let productAmountData = productAmount.textContent;
+
   if (productAmountData >= 2) {
     productAmount.innerText = --productAmountData;
+
+    function clearClass() {
+      productAmount.classList.remove('amount-bounce');
+    }
     productAmount.classList.add('amount-bounce');
     setTimeout(clearClass, 300);
   }
+
 }
 
 for (let plus of productPlus) {

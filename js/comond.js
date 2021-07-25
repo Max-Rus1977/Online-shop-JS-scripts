@@ -1,21 +1,23 @@
 const productMinus = document.querySelectorAll('.product-minus-js');
-const productAmount = document.querySelectorAll('.product-amount-js');
 const productPlus = document.querySelectorAll('.product-plus-js');
 
-let productAmountData = 1;
 
-
-
-function clearClass() {
-  productAmount.classList.remove('amount-bounce');
-}
-
-function a() {
-
-}
 
 function increaseAmountProduct() {
+
+  const thisProductCounter = this.closest('.wrapper-product__counter');
+  const productAmount = thisProductCounter.querySelector('.product-amount-js');
+  console.log(productAmount);
+
+  let productAmountData = productAmount.textContent;
+
   productAmount.innerText = ++productAmountData;
+  console.log(productAmountData);
+
+  function clearClass() {
+    productAmount.classList.remove('amount-bounce');
+  }
+
   productAmount.classList.add('amount-bounce');
   setTimeout(clearClass, 300);
 }

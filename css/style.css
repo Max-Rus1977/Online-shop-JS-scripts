@@ -102,9 +102,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .wrapper-product {
   width: 250px;
+  margin-right: 20px;
   padding: 15px;
   border: 2px solid #0dccf7;
   border-radius: 6px;
+}
+
+.wrapper-product:nth-child(4n+4) {
+  margin-right: 0;
 }
 
 .product__imge {}

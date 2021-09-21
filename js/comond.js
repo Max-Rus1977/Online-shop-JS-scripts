@@ -49,27 +49,60 @@ for (let minus of productMinus) {
 
 const asideCart = document.querySelector('.aside-cart-js');
 const btnCarts = document.querySelectorAll('.btn-cart');
+const blockBasketEmpty = document.querySelector('.aside-cart__content');
 
-function addTooCart() {
+let productId = '';
+let counter = 0;
+
+function addTooCart(event) {
+
+
+  counter++;
+  if (counter > 0) {
+    blockBasketEmpty.classList.add('_not-visible')
+  }
+
+  disabletBtn(event);
+  blockItProductCounter(event);
+
   const thisProductCard = this.closest('.product');
   const clonThisProductCard = thisProductCard.cloneNode(true);
 
   clonThisProductCard.classList.add('cart-product');
   clonThisProductCard.querySelector('.btn-cart').remove();
   clonThisProductCard.insertAdjacentHTML('afterbegin', '<div class="close-cartProduct">&#10060;</div>');
-  const a = clonThisProductCard.querySelector('.close-cartProduct');
+  const deleteProductCart = clonThisProductCard.querySelector('.close-cartProduct');
 
-  a.addEventListener('click', () => {
-    a.closest('.cart-product').remove();
+  deleteProductCart.addEventListener('click', () => {
+    productId = deleteProductCart.closest('.cart-product').id;
+    deleteProductCart.closest('.cart-product').remove();
 
+    const removeBlockElements = document.getElementById(productId);
+    const btnRemoveDisadlet = removeBlockElements.querySelector('.btn-cart');
+    btnRemoveDisadlet.disabled = false;
+    btnRemoveDisadlet.classList.remove('disablet-btn');
+    btnRemoveDisadlet.innerText = 'В карзину';
+
+    removeBlockElements.querySelector('.wrapper-product__counter').classList.remove('js-stile');
+
+    counter--;
+    if (counter <= 0) {
+      blockBasketEmpty.classList.remove('_not-visible')
+    }
   });
-
-
-  // clonThisProductCard.prepend(removeProduct);
 
   asideCart.appendChild(clonThisProductCard);
 
+}
 
+function disabletBtn(event) {
+  event.target.disabled = true;
+  event.target.classList.add('disablet-btn');
+  event.target.innerText = 'товар в карзине';
+}
+
+function blockItProductCounter(event) {
+  event.target.closest('.product').querySelector('.wrapper-product__counter').classList.add('js-stile');
 }
 
 for (let btnCart of btnCarts) {
@@ -77,14 +110,14 @@ for (let btnCart of btnCarts) {
 }
 
 const divCloseCartProduct = asideCart.getElementsByClassName('close-cartProduct');
-console.log(divCloseCartProduct);
+//console.log(divCloseCartProduct);
 
 for (let divClose of divCloseCartProduct) {
   divClose.addEventListener('click', function () {
-    // clonThisProductCard.remove();
-    console.log(this.divClose);
+    //console.log(this.divClose);
 
   })
 }
 
-//asideCart.getElementsByClassName
+/* Карзина */
+

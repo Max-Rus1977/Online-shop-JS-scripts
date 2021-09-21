@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.5s;
 }
 
-.btn:hover {
+.btn:not([disabled]):hover {
   background-color: #f3f3f3;
   color: #000;
   border: 2px solid silver;
@@ -128,8 +128,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper-product__counter {
+  position: relative;
   margin: 15px;
   text-align: center;
+}
+
+.wrapper-product__counter:after {
+  content: '';
+  position: absolute;
+  width: 88%;
+  height: 121%;
+  top: -3px;
+  left: 6%;
+  background-color: rgb(117 117 117 / 48%);
+  z-index: -10;
+  opacity: 0;
+}
+
+.js-stile.wrapper-product__counter:after {
+  z-index: 10;
+  opacity: 1;
+}
+
+.cart-product .js-stile.wrapper-product__counter:after {
+  content: none;
 }
 
 .counter__box {
@@ -205,6 +227,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .aside-cart .product__imge {
   width: 150px;
+}
+
+.aside-cart__content {
+  width: 100%;
+  height: 60px;
+  margin-top: 60px;
+  background-color: #757575;
+  color: #fff;
+}
+
+/* Btn desablet */
+
+.disablet-btn {
+  background-color: #c1c1c1;
+  color: #000;
+  border: 2px solid #606060;
+}
+
+._not-visible {
+  display: none;
 }
 
 /* Modal phon, Modal user, Modal thanks, Modal erorr */
